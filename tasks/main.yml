@@ -1,0 +1,7 @@
+- name: add hosts to /etc/hosts
+  sudo: true
+  lineinfile: >
+    dest=/etc/hosts
+    line="{{ item.ip }} {{ item.name }} # {{ item.name | md5 }}"
+    regexp='{{ item.name | md5 }}$'
+  with_items: save_hosts
