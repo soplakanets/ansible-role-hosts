@@ -2,7 +2,7 @@
 galaxy_info:
   author: Serhiy Oplakanets
   description: Save hosts to /etc/hosts
-  min_ansible_version: 1.4
+  min_ansible_version: 2.0
   platforms:
   - name: Ubuntu
     versions:
