@@ -4,4 +4,4 @@
     dest=/etc/hosts
     line="{{ item.ip }} {{ item.name }} {{ item.aliases | default('') | join(' ') }} # {{ item.name | md5 }}"
     regexp='{{ item.name | md5 }}$'
-  with_items: save_hosts
+  with_items: "{{ save_hosts }}"
